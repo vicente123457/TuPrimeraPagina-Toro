@@ -1,13 +1,5 @@
 # TuPrimeraPagina-Toro
 
-Proyecto Django tipo blog con:
-
-- 3 modelos: Autor, Categoría, Entrada.
-- Formularios para insertar datos.
-- Formulario para buscar entradas.
-- Herencia de plantillas HTML.
-- Patrón MVT.
-
 ## Cómo probar
 
 1. Clona el repositorio.
