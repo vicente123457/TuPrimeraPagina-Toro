@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% block contenido %}
+<h2>Entradas recientes</h2>
+<ul>
+    {% for entrada in entradas %}
+        <li><strong>{{ entrada.titulo }}</strong> - {{ entrada.autor }} ({{ entrada.fecha_publicacion|date:"d M Y" }})</li>
+    {% empty %}
+        <li>No hay entradas publicadas.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

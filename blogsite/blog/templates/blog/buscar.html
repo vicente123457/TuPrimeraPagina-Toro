@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% block contenido %}
+<h2>Buscar Entradas</h2>
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Buscar</button>
+</form>
+
+{% if resultados %}
+    <h3>Resultados:</h3>
+    <ul>
+        {% for entrada in resultados %}
+            <li>{{ entrada.titulo }}</li>
+        {% empty %}
+            <li>No se encontraron coincidencias.</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

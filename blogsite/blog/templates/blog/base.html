@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Blog</title>
+</head>
+<body>
+    <header>
+        <h1>Mi Blog</h1>
+        <nav>
+            <a href="{% url 'index' %}">Inicio</a> |
+            <a href="{% url 'crear_autor' %}">Nuevo Autor</a> |
+            <a href="{% url 'crear_categoria' %}">Nueva Categoría</a> |
+            <a href="{% url 'crear_entrada' %}">Nueva Entrada</a> |
+            <a href="{% url 'buscar' %}">Buscar</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block contenido %}
+        <!-- Aquí va el contenido específico de cada página -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>© 2025 Mi Blog</p>
+    </footer>
+</body>
+</html>
